@@ -1,9 +1,9 @@
 
-import { PrismaClient } from "../lib/generated/prisma/client";
+import { PrismaClient } from "@/lib/generated/prisma/client";
 import { PrismaPg } from '@prisma/adapter-pg'
 
 const globalForPrisma = global as unknown as {
-    prisma: PrismaClient
+  prisma: PrismaClient
 }
 
 const adapter = new PrismaPg({
@@ -32,7 +32,7 @@ export async function main() {
       createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24 * (i * 5)),
     })),
   });
-  
+
 
   console.log("Seed data created successfully")
   console.log("Created 25 Products for user ID: ", demoUserId)

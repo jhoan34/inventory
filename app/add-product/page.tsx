@@ -15,7 +15,7 @@ export default async function AddProduct() {
                     <div className="flex items-center justify-between">
                         <div>
                             <h1 className="text-2xl font-semibold text-gray-900">Add Product</h1>
-                            <p className="text-gray-500 text-sm">Add a new product to your inventory.</p>
+                            <p className="text-gray-500 text-sm">Add a new product to your inventory as {user.primaryEmail ?? user.displayName ?? "your account"}.</p>
                         </div>
 
                     </div>
